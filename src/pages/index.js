@@ -1,18 +1,26 @@
-// Step 1: Import React
 import * as React from "react";
+import Hero from "../components/Hero";
+import Nav from "../components/Nav";
+import FAQs from "../components/FAQs";
+import Video from "../components/Video";
+import Resources from "../components/Resources";
+import Footer from "../components/Footer";
 
-// Step 2: Define your component
+import "../components/css/index.scss";
+
 const IndexPage = () => {
   return (
-    <main>
-      <h1>Welcome to my Gatsby site!</h1>
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-    </main>
+    <>
+      <Nav />
+      <Hero />
+      <FAQs />
+      <Video />
+      <Resources />
+      <Footer />
+    </>
   );
 };
 
-// You'll learn about this in the next task, just copy it for now
 export const Head = () => <title>Get Answers</title>;
 
-// Step 3: Export your component
 export default IndexPage;
