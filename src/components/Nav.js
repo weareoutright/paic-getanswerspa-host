@@ -13,7 +13,11 @@ const Nav = () => {
   return (
     <div className="Nav">
       {NAV_LINKS.map((link) => {
-        return <Link href={link.url}>{link.title}</Link>;
+        return (
+          <Link key={link.title} href={link.url}>
+            {link.title}
+          </Link>
+        );
       })}
     </div>
   );

@@ -1,0 +1,66 @@
+.Hero {
+    background-color: $dark-teal;
+    padding: 1em .5em 5em 10em;
+    h1 {
+        color: $pink;
+        font-family: $main-typeface, sans-serif;
+        font-size: 6em;
+        font-style: normal;
+        font-weight: 700;
+        line-height: .9em; /* 93.966% */
+        letter-spacing: -.01em;
+        text-transform: uppercase;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-top: .4em;
+    }
+
+    h2 {
+        color: $white;
+        font-family: $main-typeface, sans-serif;
+        font-size: 1.67rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 36px; /* 109.091% */
+        letter-spacing: 0.66px;
+        text-transform: uppercase;
+    }
+
+    button {
+        background-color: transparent;
+        display: inline-flex;
+        padding: .75em 1.5em;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        border-radius: 1.6em;
+        border: 2px solid $pink;
+        box-shadow: .2em .2em 0em 0em $pink;
+        color: $white;
+        width: fit-content;
+        text-transform: uppercase;
+        line-height: .9em; /* 93.966% */
+        letter-spacing: -.001em;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        font-size: 1.25em;
+        margin-top: 1.5em;
+        span {
+            margin: 0em 0em 0em .5em;
+            position: relative;
+            height: auto;
+        }
+    }
+
+    button:hover {
+        cursor: pointer;
+        box-shadow: none;
+        top: .2em;
+        left: .2em;
+    }
+
+    .hero-main-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
