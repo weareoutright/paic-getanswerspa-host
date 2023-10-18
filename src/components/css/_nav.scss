@@ -1,0 +1,24 @@
+.Nav {
+    background-color: transparent;
+    position: fixed;
+    color: $white;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    justify-content: space-evenly;
+    border-bottom: 2px solid $pink;
+    font-family: 'Proxima Nova Rg', sans-serif;
+    a {
+        color: $white;
+        text-decoration: none;
+        padding: 1em 3em;
+    } 
+    
+    .active {
+        background-color: $pink;
+        color: black;
+        font-weight: 800;
+    }
+}

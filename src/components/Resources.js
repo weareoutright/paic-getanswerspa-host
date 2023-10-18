@@ -3,7 +3,7 @@ import SingleResource from "./SingleResource";
 
 const Resources = () => {
   return (
-    <section className="Resources">
+    <section className="Resources" id="resources">
       <SingleResource />
     </section>
   );

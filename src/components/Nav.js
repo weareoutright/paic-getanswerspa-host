@@ -1,22 +1,35 @@
-import { Link } from "gatsby";
-import React from "react";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import React, { useEffect, useState } from "react";
+
+// import { window, document } from "browser-monads";
 
 const NAV_LINKS = [
-  { title: "Home", url: "#home" },
-  { title: "FAQs", url: "#faqs" },
-  { title: "Interviews", url: "#interviews" },
-  { title: "Resources", url: "#resources" },
-  { title: "Contact", url: "#contact" },
+  { title: "Home", url: "/#home", hash: "/" },
+  { title: "FAQs", url: "/#faqs", hash: "faqs" },
+  {
+    title: "Interviews",
+    url: "/#interviews",
+    hash: "interviews",
+  },
+  { title: "Resources", url: "/#resources", hash: "resources" },
+  { title: "Contact", url: "/#contact", hash: "contact" },
 ];
 
 const Nav = () => {
+  const [currentElement, setCurrentElement] = useState("Home");
+
   return (
     <div className="Nav">
       {NAV_LINKS.map((link) => {
         return (
-          <Link key={link.title} href={link.url}>
+          <AnchorLink
+            key={link.title}
+            to={link.url}
+            className={link.title === currentElement ? "active" : ""}
+            onAnchorLinkClick={() => setCurrentElement(link.title)}
+          >
             {link.title}
-          </Link>
+          </AnchorLink>
         );
       })}
     </div>

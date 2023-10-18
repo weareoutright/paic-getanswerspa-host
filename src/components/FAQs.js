@@ -10,7 +10,7 @@ const TOPICS = [
 
 const FAQs = () => {
   return (
-    <section className="FAQs">
+    <section className="FAQs" id="faqs">
       {TOPICS.map((topic) => {
         return (
           <div key={topic.title} className="faq-topic">
