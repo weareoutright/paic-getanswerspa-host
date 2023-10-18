@@ -1,6 +1,6 @@
 .Hero {
     background-color: $dark-teal;
-    padding: 4em .5em 5em 10em;
+    padding: 5.5em .5em 5em 10em;
     display: flex;
     flex-direction: row;
     align-items: top;
@@ -8,7 +8,7 @@
     h1 {
         color: $pink;
         font-family: $main-typeface, sans-serif;
-        font-size: 7em;
+        font-size: 6.75em;
         font-style: normal;
         font-weight: 700;
         line-height: .9em; /* 93.966% */
@@ -22,7 +22,7 @@
     h2 {
         color: $white;
         font-family: $main-typeface, sans-serif;
-        font-size: 1.95rem;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 600;
         line-height: 36px; /* 109.091% */
@@ -34,7 +34,7 @@
     button {
         background-color: transparent;
         display: inline-flex;
-        padding: .75em 1.5em;
+        padding: .85em 1.25em .95em 1.25em;
         justify-content: center;
         position: relative;
         align-items: center;
@@ -47,9 +47,9 @@
         line-height: .9em; /* 93.966% */
         letter-spacing: -.001em;
         font-family: 'Oswald', sans-serif;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 1.25em;
-        margin-top: 1.5em;
+        margin-top: 1.65em;
         a {
             width: fit-content;
             color: $white;

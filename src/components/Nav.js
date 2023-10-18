@@ -20,18 +20,20 @@ const Nav = () => {
 
   return (
     <div className="Nav">
-      {NAV_LINKS.map((link) => {
-        return (
-          <AnchorLink
-            key={link.title}
-            to={link.url}
-            className={link.title === currentElement ? "active" : ""}
-            onAnchorLinkClick={() => setCurrentElement(link.title)}
-          >
-            {link.title}
-          </AnchorLink>
-        );
-      })}
+      <div className="nav-container">
+        {NAV_LINKS.map((link) => {
+          return (
+            <AnchorLink
+              key={link.title}
+              to={link.url}
+              className={link.title === currentElement ? "active" : ""}
+              onAnchorLinkClick={() => setCurrentElement(link.title)}
+            >
+              {link.title}
+            </AnchorLink>
+          );
+        })}
+      </div>
     </div>
   );
 };
