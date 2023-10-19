@@ -4,11 +4,10 @@ import { getSvg } from "../images/svgFiles";
 const SingleFAQ = ({ topic }) => {
   const [showQuestions, setShowQuestions] = useState(false);
   const [showAnswers, setShowAnswers] = useState(false);
-  const [questionArrow, setQuestionArrow] = useState("arrow-back");
   const [topicArrow, setTopicArrow] = useState("open-button");
   const [currentAnswer, setCurrentAnswer] = useState(null);
 
-  useEffect(() => {}, [showQuestions, showAnswers, questionArrow, topicArrow]);
+  useEffect(() => {}, [showQuestions, showAnswers, topicArrow]);
 
   return (
     <>
@@ -28,7 +27,7 @@ const SingleFAQ = ({ topic }) => {
         </h4>
       </div>
       <div key={topic.title} className="faq-topic">
-        {topic.content.map((content, index) => {
+        {topic.content.map((content) => {
           return (
             <>
               <div

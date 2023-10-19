@@ -2,7 +2,7 @@ import * as React from "react";
 import Hero from "../components/Hero";
 import Nav from "../components/Nav";
 import FAQs from "../components/FAQs";
-import Video from "../components/Video";
+import Quote from "../components/Quote";
 import Resources from "../components/Resources";
 import Footer from "../components/Footer";
 
@@ -29,7 +29,7 @@ const IndexPage = () => {
       <Nav />
       <Hero />
       <FAQs />
-      <Video />
+      <Quote />
       <Resources />
       <Footer />
     </>

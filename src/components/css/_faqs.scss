@@ -1,10 +1,11 @@
 .FAQs {
-    height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     background-color: $purple;
     color: $white;
     padding-top: 1.5em;
+    padding-bottom: 10em;
     .faq-header-and-image {
         width: 25%;
         display: flex;

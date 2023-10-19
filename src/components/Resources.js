@@ -4,6 +4,7 @@ import SingleResource from "./SingleResource";
 const Resources = () => {
   return (
     <section className="Resources" id="resources">
+      <h2>Resources</h2>
       <SingleResource />
     </section>
   );
