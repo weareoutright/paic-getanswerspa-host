@@ -1,3 +1,36 @@
 .FAQs {
     height: 2000px;
+    display: flex;
+    flex-direction: row;
+    background-color: $purple;
+    color: $white;
+    padding-top: 1.5em;
+    .faq-header-and-image {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        h2 {
+            color: $pink;
+            font-family: $main-typeface, sans-serif;
+            font-size: 5.75em;
+            font-style: normal;
+            font-weight: 700;
+            line-height: .9em; /* 93.966% */
+            letter-spacing: -.01em;
+            text-transform: uppercase;
+            padding-bottom: 0;
+            margin-bottom: .5em;
+            text-align: right;
+        }
+        .faq-image {
+            border-radius: 0em 1em 1em 0em;
+        }
+    }
+    .faq-content {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        padding: 1.9em 10em;
+    }
+
 }

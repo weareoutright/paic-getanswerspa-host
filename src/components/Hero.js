@@ -1,5 +1,5 @@
 import React from "react";
-import { getSvg } from "../images/arrow_downward_alt";
+import { getSvg } from "../images/svgFiles";
 import heroImg from "../images/hero-image.png";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 

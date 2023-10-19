@@ -1,7 +1,5 @@
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import React, { useEffect, useState } from "react";
-
-// import { window, document } from "browser-monads";
+import React, { useState } from "react";
 
 const NAV_LINKS = [
   { title: "Home", url: "/#home", hash: "/" },
