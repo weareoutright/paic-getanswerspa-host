@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import { getSvg } from "../images/svgFiles";
 
 const SingleFAQ = ({ topic }) => {
-  const closeTopicBtn = getSvg("close-button");
-  const arrowBack = getSvg("arrow-back");
-  const arrowForward = getSvg("arrow-forward");
-
   const [showQuestions, setShowQuestions] = useState(false);
   const [showAnswers, setShowAnswers] = useState(false);
   const [questionArrow, setQuestionArrow] = useState("arrow-back");
   const [topicArrow, setTopicArrow] = useState("open-button");
+  const [currentAnswer, setCurrentAnswer] = useState(null);
 
   useEffect(() => {}, [showQuestions, showAnswers, questionArrow, topicArrow]);
 
@@ -19,11 +16,12 @@ const SingleFAQ = ({ topic }) => {
         <h4>
           {topic.title}
           <button
-            onClick={() =>
+            onClick={() => {
               setTopicArrow(
                 topicArrow === "open-button" ? "close-button" : "open-button"
-              )
-            }
+              );
+              setShowQuestions(!showQuestions);
+            }}
           >
             <span>{getSvg(topicArrow)}</span>
           </button>
@@ -32,22 +30,36 @@ const SingleFAQ = ({ topic }) => {
       <div key={topic.title} className="faq-topic">
         {topic.content.map((content, index) => {
           return (
-            <div className="faq-question">
-              {content.question}{" "}
-              <button
-                onClick={() => {
-                  setQuestionArrow(
-                    questionArrow === "arrow-back"
-                      ? "arrow-forward"
-                      : "arrow-back"
-                  );
-                }}
+            <>
+              <div
+                className={
+                  showQuestions ? "faq-question" : "faq-question-hidden"
+                }
               >
-                <span className={`faq-question-${index}`}>
-                  {getSvg(questionArrow)}
-                </span>
-              </button>
-            </div>
+                {content.question}{" "}
+                <button
+                  onClick={() => {
+                    setShowAnswers(!showAnswers);
+                    setCurrentAnswer(content.id);
+                  }}
+                >
+                  <span>
+                    {content.id === currentAnswer && showAnswers
+                      ? getSvg("arrow-forward")
+                      : getSvg("arrow-back")}
+                  </span>
+                </button>
+              </div>
+              <p
+                className={
+                  showAnswers && content.id === currentAnswer
+                    ? "faq-answer"
+                    : "faq-answer-hidden"
+                }
+              >
+                {content.answer}
+              </p>
+            </>
           );
         })}
       </div>

@@ -6,17 +6,19 @@ const TOPICS = [
   {
     title: "FLU/INFLUENZA",
     content: [
-      { question: "Who's the best?", answer: "Grace" },
-      { question: "Who's the best?", answer: "Grace" },
-      { question: "Who's the best?", answer: "Grace" },
+      { id: 0, question: "Who's the best?", answer: "Grace" },
+      { id: 1, question: "Who's the best?", answer: "Kelsey" },
+      { id: 2, question: "Who's the best?", answer: "Sarah" },
+      { id: 3, question: "Who's the best?", answer: "Dakota" },
     ],
   },
   {
     title: "COVID",
     content: [
-      { question: "Who's the best?", answer: "Grace" },
-      { question: "Who's the best?", answer: "Grace" },
-      { question: "Who's the best?", answer: "Grace" },
+      { id: 0, question: "Who's the best?", answer: "Grace" },
+      { id: 1, question: "Who's the best?", answer: "Kelsey" },
+      { id: 2, question: "Who's the best?", answer: "Sarah" },
+      { id: 3, question: "Who's the best?", answer: "Dakota" },
     ],
   },
 ];
