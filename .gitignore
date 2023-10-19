@@ -1,3 +1,11 @@
 node_modules/
 .cache/
 public
+TODO.txt
+.env
+__mocks__/
+./src/components/__tests__/
+jest-preprocess.js 
+jest.config.js
+loadershim.js
+setup-test-env.js
