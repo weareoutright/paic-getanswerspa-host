@@ -50,7 +50,7 @@
             padding-right: .3em;
             background-color: transparent;
             border: none;
-            padding: 0;
+            padding: 1em;
             margin: none;
             height: fit-content;
             width: auto;
@@ -72,7 +72,9 @@
         margin: 0;
         padding-bottom: 1em;
         font-weight: 200;
-        font-size: 1em
+        font-size: 1em;
+        transition: 0.2s ease-in-out;
+        transform-origin: center;
     }
     .faq-answer-hidden {
         display: none;
