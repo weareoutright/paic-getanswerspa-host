@@ -1,13 +1,63 @@
 .Quote {
-    height: 50vh;
+    height: 58vh;
     background-color: $pink;
     color: $purple;
-    span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0 5em 0;
+    .open-and-quote {
+        display: flex;
+        flex-direction: row;
+        .open-quotation {
+            font-size: 15em;
+            letter-spacing: -5px;
+            height: fit-content;
+            transform: rotate(180deg);
+            text-align: right;
+            color: rgb(255, 255, 255, .3);
+            margin: 0 .2em 0 .3em;
+            padding-right: .5em;
+        }
+        .main-quote {
+            padding-bottom: 5em;
+            margin: auto 0;
+            font-weight: 600;
+            padding-top: 2em;
+            text-align: center;
+            .quote-content {
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                padding: 2em 3em 0 3em;
+                font-size: 2.5em;
+                margin: 0;
+            }
+            .quote-author, .quote-author-info {
+                font-family: $secondary-typeface, sans-serif;
+            }
+            .quote-author {
+                padding-top: 1em;
+                font-weight: 600;
+                font-size: 1em;
+                letter-spacing: .36px;
+                margin-bottom: 0.25em;
+            }
+            .quote-author-info {
+                font-weight: 400;
+            }
+        }
+    }
+    .close-quotation{
+        margin: 0 .3em 0 .2em;
         font-size: 15em;
+        letter-spacing: -5px;
+        text-align: right;
+        color: rgb(255, 255, 255, .3);
+        padding-top: .8em;
+        padding-right: .5em;
+        justify-content: end;
     }
-    .quote-content {
-        font-size: 3em;
-    }
+    
 }
 
 /*
