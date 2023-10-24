@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { getSvg } from "../images/svgFiles";
 import heroImg from "../images/hero-image.png";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Hero = () => {
+  const [buttonDown, setButtonDown] = useState(false);
+
+  // useState(() => {}, [buttonDown]);
+
+  const grabAttention = () => {
+    setButtonDown(!buttonDown);
+  };
+
+  setTimeout(grabAttention, 1000);
+
   return (
     <main className="Hero" id="home">
       <div className="hero-main-content">
@@ -17,7 +27,7 @@ const Hero = () => {
           Confusing.
         </h1>
         <h2>Pennsylvania Doctors have answers.</h2>
-        <button>
+        <button className={buttonDown ? "attention-getter" : ""}>
           <AnchorLink to="#faqs">
             Start Here <span>{getSvg("arrow-downward-alt")}</span>
           </AnchorLink>

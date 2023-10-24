@@ -10,7 +10,7 @@ const QUOTE = {
 
 const Quote = () => {
   return (
-    <section className="Quote">
+    <section className="Quote" id="interviews">
       <div className="open-and-quote">
         <div className="open-quotation">,,</div>
         <div className="main-quote">

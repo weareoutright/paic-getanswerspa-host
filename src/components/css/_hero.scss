@@ -74,6 +74,12 @@
 
     }
 
+    .attention-getter {
+        box-shadow: none;
+        top: .2em;
+        left: .2em;
+    }
+
     .hero-main-content {
         display: flex;
         flex-direction: column;
