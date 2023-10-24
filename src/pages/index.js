@@ -7,6 +7,7 @@ import Resources from "../components/Resources";
 import Footer from "../components/Footer";
 
 import Helmet from "react-helmet";
+import { Script } from "gatsby";
 
 import "../components/css/styles.scss";
 
@@ -32,6 +33,29 @@ const IndexPage = () => {
       <Quote />
       <Resources />
       <Footer />
+
+      <Script>
+        {`const navArea = document.getElementsByClassName("Nav");
+          const faqArea = document.getElementsByClassName("FAQs");
+          const quoteArea = document.getElementsByClassName("Quote");
+          const resourcesArea = document.getElementsByClassName("Resources");
+
+          function elementsOverlap(el1, el2) {
+            const domRect1 = el1[0].getBoundingClientRect();
+            const domRect2 = el2[0].getBoundingClientRect();
+
+            return !(
+              domRect1.top > domRect2.bottom ||
+              domRect1.right < domRect2.left ||
+              domRect1.bottom < domRect2.top ||
+              domRect1.left > domRect2.right
+            );
+          }
+
+          console.log(elementsOverlap(navArea, faqArea));
+          console.log(elementsOverlap(navArea, quoteArea));
+          console.log(elementsOverlap(navArea, resourcesArea));`}
+      </Script>
     </>
   );
 };
