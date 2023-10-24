@@ -1,35 +1,36 @@
-.SingleResource {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 10em;
-    max-height: 10em;
-    width: 25em;
-    background-color: $white;
-    border: 2px solid $dark-teal;
-    padding:  1.75em 1em 9.5em 2em;
-    margin: 1.5em 0 1.5em 0;
-    border-radius: .85em;
-    text-align: left;
-    box-shadow: 8px 8px 0px 0px $dark-teal;
-    position: relative;
-    .resource-link {
-        font-family: $secondary-typeface, sans-serif;
-        font-size: 1.25em;
-        font-weight: 500;
+.SingleResourceForm {
+    .SingleResource {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 10em;
+        max-height: 10em;
+        width: 25em;
+        background-color: $white;
+        border: 2px solid $dark-teal;
+        padding:  1.75em 1em 9.5em 2em;
+        margin: 1.5em 0 1.5em 0;
+        border-radius: .85em;
+        text-align: left;
+        box-shadow: 8px 8px 0px 0px $dark-teal;
+        position: relative;
+        .resource-link {
+            font-family: $secondary-typeface, sans-serif;
+            font-size: 1.25em;
+            font-weight: 500;
+        }
+        .resource-title {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
     }
-    .resource-title {
-        font-size: 1.5em;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 1.5px;
+    
+    .SingleResource:hover {
+        cursor: pointer;
+        box-shadow: none;
+        top: .2em;
+        left: .2em;
     }
-
-}
-
-.SingleResource:hover {
-    cursor: pointer;
-    box-shadow: none;
-    top: .2em;
-    left: .2em;
 }
