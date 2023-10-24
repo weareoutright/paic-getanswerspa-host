@@ -18,6 +18,7 @@ const NAV_LINKS = [
 const Nav = () => {
   const [currentElement, setCurrentElement] = useState("");
   const [offset, setOffset] = useState(0);
+  const [navBackground, setNavBackground] = useState("Nav");
 
   const navArea = document.getElementsByClassName("Nav");
   const homeArea = document.getElementsByClassName("Hero");
@@ -35,15 +36,34 @@ const Nav = () => {
   }, []);
 
   useEffect(() => {
-    if (elementsOverlap(navArea, homeArea)) setCurrentElement("Home");
-    if (elementsOverlap(navArea, faqArea)) setCurrentElement("FAQs");
-    if (elementsOverlap(navArea, quoteArea)) setCurrentElement("Interviews");
-    if (elementsOverlap(navArea, resourcesArea)) setCurrentElement("Resources");
-    if (elementsOverlap(navArea, contactArea)) setCurrentElement("Contact");
+    if (elementsOverlap(navArea, homeArea)) {
+      setCurrentElement("Home");
+      setNavBackground("Nav nav-dark-teal");
+    }
+
+    if (elementsOverlap(navArea, faqArea)) {
+      setCurrentElement("FAQs");
+      setNavBackground("Nav nav-purple");
+    }
+
+    if (elementsOverlap(navArea, quoteArea)) {
+      setCurrentElement("Interviews");
+      setNavBackground("Nav nav-pink");
+    }
+
+    if (elementsOverlap(navArea, resourcesArea)) {
+      setCurrentElement("Resources");
+      setNavBackground("Nav nav-peach");
+    }
+
+    if (elementsOverlap(navArea, contactArea)) {
+      setCurrentElement("Contact");
+      setNavBackground("Nav nav-peach");
+    }
   }, [offset]);
 
   return (
-    <div className="Nav" id="nav">
+    <div className={navBackground} id="nav">
       <div className="nav-container">
         {NAV_LINKS.map((link) => {
           return (
