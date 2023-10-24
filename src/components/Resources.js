@@ -49,7 +49,11 @@ const Resources = () => {
         })}
       </div>
 
-      <img alt="adult hugging child" src={resourceImg} />
+      <img
+        className="footer-img-overlap"
+        alt="adult hugging child"
+        src={resourceImg}
+      />
     </section>
   );
 };
