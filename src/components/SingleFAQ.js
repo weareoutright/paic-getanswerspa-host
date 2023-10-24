@@ -11,7 +11,16 @@ const SingleFAQ = ({ topic }) => {
 
   return (
     <>
-      <div className="faq-content-header">
+      <div
+        className="faq-content-header"
+        onClick={() => {
+          if (showAnswers) setShowAnswers(false);
+          setTopicArrow(
+            topicArrow === "open-button" ? "close-button" : "open-button"
+          );
+          setShowQuestions(!showQuestions);
+        }}
+      >
         <h4>
           {topic.title}
           <button
@@ -28,7 +37,7 @@ const SingleFAQ = ({ topic }) => {
         </h4>
       </div>
       <div key={topic.title} className="faq-topic">
-        {topic.content.map((content, index) => {
+        {topic.content.map((content) => {
           return (
             <div
               className={showQuestions ? "faq-q-and-a" : "faq-q-and-a-hidden"}
@@ -37,6 +46,10 @@ const SingleFAQ = ({ topic }) => {
                 className={
                   showQuestions ? "faq-question" : "faq-question-hidden"
                 }
+                onClick={() => {
+                  setShowAnswers(!showAnswers);
+                  setCurrentAnswer(content.id);
+                }}
               >
                 {content.question}{" "}
                 <button
