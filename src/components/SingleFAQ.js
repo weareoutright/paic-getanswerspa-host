@@ -47,15 +47,15 @@ const SingleFAQ = ({ topic }) => {
                   showQuestions ? "faq-question" : "faq-question-hidden"
                 }
                 onClick={() => {
-                  setShowAnswers(!showAnswers);
                   setCurrentAnswer(content.id);
+                  setShowAnswers(!showAnswers);
                 }}
               >
                 {content.question}{" "}
                 <button
                   onClick={() => {
-                    setShowAnswers(!showAnswers);
                     setCurrentAnswer(content.id);
+                    setShowAnswers(!showAnswers);
                   }}
                 >
                   <span>

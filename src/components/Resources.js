@@ -4,7 +4,7 @@ import {
   MAIN_RESOURCES,
   FLU_RESOURCES,
   COVID_RESOURCES,
-} from "../constants/resources";
+} from "../constants/resourcesInfo";
 import resourceImg from "../images/adult-hugging-child.png";
 
 const Resources = () => {
