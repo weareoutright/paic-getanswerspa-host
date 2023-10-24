@@ -12,7 +12,7 @@ const Hero = () => {
     setButtonDown(!buttonDown);
   };
 
-  setTimeout(grabAttention, 1000);
+  setTimeout(grabAttention, 1500);
 
   return (
     <main className="Hero" id="home">
