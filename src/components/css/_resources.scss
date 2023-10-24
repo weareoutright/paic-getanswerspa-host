@@ -1,7 +1,7 @@
 .Resources {
     height: fit-content;
     background-color: $peach;
-    padding: 5.5em 0em 15em 13em;
+    padding: 5.5em 0em 10em 13em;
     margin: 0 auto;
     color: $dark-teal;
     height: fit-content;
@@ -30,6 +30,11 @@
         grid-template-columns: 
             4fr 4fr 4fr;
             
+    }
+    img {
+        position: absolute;
+        right: 0;
+        margin-top: -173px;
     }
 }
 
