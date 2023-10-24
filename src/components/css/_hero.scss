@@ -46,7 +46,7 @@
         text-transform: uppercase;
         line-height: .9em; /* 93.966% */
         letter-spacing: -.001em;
-        font-family: 'Oswald', sans-serif;
+        font-family: $main-typeface, sans-serif;
         font-weight: 300;
         font-size: 1.25em;
         margin-top: 1.65em;
@@ -71,6 +71,7 @@
         box-shadow: none;
         top: .2em;
         left: .2em;
+
     }
 
     .hero-main-content {
