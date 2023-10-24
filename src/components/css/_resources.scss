@@ -1,6 +1,42 @@
 .Resources {
     height: fit-content;
     background-color: $peach;
-    padding-bottom: 10em;
+    padding: 5.5em 0em 10em 13em;
+    margin: 0 auto;
     color: $dark-teal;
+    h2 {
+        color: $dark-teal;
+        font-family: $main-typeface, sans-serif;
+        font-size: 5.75em;
+        font-style: normal;
+        font-weight: 700;
+        line-height: .9em; /* 93.966% */
+        letter-spacing: -.01em;
+        text-transform: uppercase;
+        padding-bottom: 0;
+        margin-bottom: .3em;
+        text-align: left;
+    }
+    h4 {
+        text-transform: uppercase;
+        margin-bottom: .3em;
+    }
+    .main-resources, .flu-resources, .covid-resources {
+        display: grid;
+        align-items: top;
+        justify-content: space-between;
+        margin-right: 7em;
+        grid-template-columns: 
+            4fr 4fr 4fr;
+            
+    }
+    img {
+        position: absolute;
+        right: 0;
+        margin-top: -173px;
+    }
 }
+
+/*
+
+*/

@@ -36,6 +36,6 @@ const IndexPage = () => {
   );
 };
 
-export const Head = () => <title>Get Answers</title>;
+export const Head = () => <title>Get Answers PA</title>;
 
 export default IndexPage;

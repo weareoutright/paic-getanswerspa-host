@@ -1,14 +1,14 @@
 .Hero {
     background-color: $dark-teal;
-    padding: 5.5em .5em 5em 10em;
+    padding: 5.5em .5em 3em 13em;
     display: flex;
     flex-direction: row;
     align-items: top;
-    height: 100vh;
+    height: 85vh;
     h1 {
         color: $pink;
         font-family: $main-typeface, sans-serif;
-        font-size: 6.75em;
+        font-size: 8em;
         font-style: normal;
         font-weight: 700;
         line-height: .9em; /* 93.966% */
@@ -46,7 +46,7 @@
         text-transform: uppercase;
         line-height: .9em; /* 93.966% */
         letter-spacing: -.001em;
-        font-family: 'Oswald', sans-serif;
+        font-family: $main-typeface, sans-serif;
         font-weight: 300;
         font-size: 1.25em;
         margin-top: 1.65em;
@@ -71,15 +71,17 @@
         box-shadow: none;
         top: .2em;
         left: .2em;
+
     }
 
     .hero-main-content {
         display: flex;
         flex-direction: column;
+        
     }
 
     .hero-image {
-        padding: 3em;
+        padding-top: 3em;
         img {
             position: absolute;
             right: 0;
