@@ -4,8 +4,8 @@
     flex-direction: row;
     background-color: $purple;
     color: $white;
-    padding-top: 1.5em;
-    padding-bottom: 10em;
+    padding: 3.5em .5em 0em 13em;
+    min-height: 140vh;
     .faq-header-and-image {
         width: 25%;
         display: flex;
@@ -21,11 +21,16 @@
             text-transform: uppercase;
             padding-bottom: 0;
             margin-bottom: .5em;
-            text-align: right;
+            text-align: left;
         }
         .faq-image {
             border-radius: 0em 1em 1em 0em;
-        }
+            padding-top: 13em;
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 20;
+        }   
     }
     .faq-content {
         width: 75%;

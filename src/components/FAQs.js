@@ -1,37 +1,7 @@
 import React from "react";
-import SingleFAQ from "./SingleFAQ";
+import SingleFAQ from "./SingleFAQ.js";
 import FAQImage from "../images/upside-down-guy.png";
-
-const TOPICS = [
-  {
-    title: "FLU/INFLUENZA",
-    content: [
-      { id: 0, question: "Who's the best?", answer: "Grace" },
-      { id: 1, question: "Who's the best?", answer: "Kelsey" },
-      { id: 2, question: "Who's the best?", answer: "Sarah" },
-      { id: 3, question: "Who's the best?", answer: "Anne" },
-      { id: 4, question: "Who's the best?", answer: "Jared" },
-      { id: 5, question: "Who's the best?", answer: "Darin" },
-      { id: 6, question: "Who's the best?", answer: "Kevin" },
-      { id: 7, question: "Who's the best?", answer: "Gaby" },
-      { id: 8, question: "Who's the best?", answer: "Amanda" },
-      { id: 9, question: "Who's the best?", answer: "Emily" },
-      { id: 10, question: "Who's the best?", answer: "Antoine" },
-      { id: 11, question: "Who's the best?", answer: "Logan" },
-      { id: 12, question: "Who's the best?", answer: "Kate" },
-      { id: 13, question: "Who's the best?", answer: "Dakota" },
-    ],
-  },
-  {
-    title: "COVID",
-    content: [
-      { id: 0, question: "Who's the best?", answer: "Grace" },
-      { id: 1, question: "Who's the best?", answer: "Kelsey" },
-      { id: 2, question: "Who's the best?", answer: "Sarah" },
-      { id: 3, question: "Who's the best?", answer: "Dakota" },
-    ],
-  },
-];
+import { TOPICS } from "../constants/faqInfo";
 
 const FAQs = () => {
   return (

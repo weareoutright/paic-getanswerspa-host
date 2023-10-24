@@ -15,13 +15,13 @@
     border-bottom: 1px solid $pink;
     .nav-container {
         margin: 0 auto;
-        padding: .75em;
+        padding: .75em 2em;
         a {
             color: $white;
             text-decoration: none;
             padding: .75em 2.75em;
-            margin-left: 2.55em;
-            margin-right: 2.55em;
+            margin-left: 3em;
+            margin-right: 3em;
         } 
         
         .active {

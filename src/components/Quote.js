@@ -1,4 +1,5 @@
 import React from "react";
+// import { QUOTES } from "../constants/quotes";
 
 const QUOTE = {
   content:
