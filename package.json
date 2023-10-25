@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
-    "browser-monads": "^1.0.0",
+    "browser-monads-ts": "^2.0.1",
     "dotenv": "^16.3.1",
     "gatsby": "^5.12.4",
     "gatsby-core-utils": "^4.12.0",

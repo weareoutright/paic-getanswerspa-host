@@ -21,7 +21,7 @@
         text-transform: uppercase;
         margin-bottom: .3em;
     }
-    .main-resources, .flu-resources, .covid-resources {
+    .main-resources {
         display: grid;
         align-items: top;
         justify-content: space-between;
@@ -29,6 +29,13 @@
         grid-template-columns: 
             4fr 4fr 4fr;
             
+    }
+    .trigger-contact-highlight {
+        position: absolute;
+        right: 0;
+        margin-top: -300px;
+        height: 10em;
+        width: 5em;
     }
     img {
         position: absolute;

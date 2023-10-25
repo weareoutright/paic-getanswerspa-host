@@ -1,7 +1,7 @@
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import React, { useState, useEffect } from "react";
 import { elementsOverlap } from "../helperFuncs/elementsOverlap";
-import { document, window } from "browser-monads";
+import { document, window } from "browser-monads-ts";
 
 const NAV_LINKS = [
   { title: "Home", url: "/#home", hash: "/" },
@@ -20,43 +20,45 @@ const Nav = () => {
   const [offset, setOffset] = useState(0);
   const [navBackground, setNavBackground] = useState("Nav");
 
-  const navArea = document.getElementsByClassName("Nav");
+  const nav = document.getElementsByClassName("Nav");
   const homeArea = document.getElementsByClassName("Hero");
   const faqArea = document.getElementsByClassName("FAQs");
   const quoteArea = document.getElementsByClassName("Quote");
   const resourcesArea = document.getElementsByClassName("Resources");
-  const contactArea = document.getElementsByClassName("covid-resources");
+  const contactArea = document.getElementsByClassName(
+    "trigger-contact-highlight"
+  );
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
       window.onscroll = () => {
-        setOffset(window.pageYOffset);
+        setOffset(window.scrollY);
       };
     }
   }, []);
 
   useEffect(() => {
-    if (elementsOverlap(navArea, homeArea)) {
+    if (elementsOverlap(nav, homeArea)) {
       setCurrentElement("Home");
       setNavBackground("Nav nav-dark-teal");
     }
 
-    if (elementsOverlap(navArea, faqArea)) {
+    if (elementsOverlap(nav, faqArea)) {
       setCurrentElement("FAQs");
       setNavBackground("Nav nav-purple");
     }
 
-    if (elementsOverlap(navArea, quoteArea)) {
+    if (elementsOverlap(nav, quoteArea)) {
       setCurrentElement("Interviews");
       setNavBackground("Nav nav-pink");
     }
 
-    if (elementsOverlap(navArea, resourcesArea)) {
+    if (elementsOverlap(nav, resourcesArea)) {
       setCurrentElement("Resources");
       setNavBackground("Nav nav-peach");
     }
 
-    if (elementsOverlap(navArea, contactArea)) {
+    if (elementsOverlap(nav, contactArea)) {
       setCurrentElement("Contact");
       setNavBackground("Nav nav-peach");
     }

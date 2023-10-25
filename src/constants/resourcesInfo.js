@@ -1,5 +1,6 @@
 export const MAIN_RESOURCES = {
   title: "",
+  topic: "",
   content: [
     {
       id: 0,
@@ -39,13 +40,14 @@ export const MAIN_RESOURCES = {
     {
       id: 7,
       link: "https://www.chop.edu/centers-programs/vaccine-education-center",
-      title: "Vaccine Education Center - Chop",
+      title: "Vaccine Education Center - CHOP",
     },
   ],
 };
 
 export const FLU_RESOURCES = {
   title: "Flu",
+  topic: "Flu/Influenza",
   content: [
     {
       id: 8,
@@ -92,6 +94,7 @@ export const FLU_RESOURCES = {
 
 export const COVID_RESOURCES = {
   title: "COVID-19",
+  topic: "COVID-19",
   content: [
     {
       id: 16,
@@ -121,10 +124,20 @@ export const COVID_RESOURCES = {
   ],
 };
 
-export const HEPB_RESOURCES = [
-  {
-    id: 21,
-    link: "https://www.cdc.gov/vaccines/vpd/hepb/index.html",
-    title: "Hepatitis B Vaccine",
-  },
+export const HEPB_RESOURCES = {
+  title: "HEP-B",
+  topic: "HEP-B",
+  content: [
+    {
+      id: 21,
+      link: "https://www.cdc.gov/vaccines/vpd/hepb/index.html",
+      title: "Hepatitis B Vaccine",
+    },
+  ],
+};
+
+export const DISPLAYED_RESOURCES = [
+  MAIN_RESOURCES,
+  FLU_RESOURCES,
+  COVID_RESOURCES,
 ];

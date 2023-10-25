@@ -6,8 +6,6 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 const Hero = () => {
   const [buttonDown, setButtonDown] = useState(false);
 
-  // useState(() => {}, [buttonDown]);
-
   const grabAttention = () => {
     setButtonDown(!buttonDown);
   };
