@@ -1,0 +1,41 @@
+.Footer {
+    height: 35vh;
+    background-color: $dark-teal;
+    color: $white;
+    padding: 3em 15em 9em 13em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .contact-info {
+        font-family: $main-typeface, sans-serif;
+        margin-bottom: 10em;
+        .site-name {
+            font-size: 1.50em;
+            margin-bottom: .5em;
+            font-weight: 300;
+        }
+        .contact {
+            font-size: 1.15em;
+            margin-top: 0;
+            font-family: $secondary-typeface, sans serif;
+            font-weight: 500;
+        }
+    }
+    .organizational-info {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        .branding-images {
+            img {
+                margin-right: 6em;
+            }
+        }
+        .copyright {
+            font-family: $secondary-typeface, sans serif;
+            font-weight: 500;
+            font-size: 1.15em;
+            margin-bottom: 0;
+        }
+    }
+}
