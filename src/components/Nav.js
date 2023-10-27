@@ -2,29 +2,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import React, { useState, useEffect } from "react";
 import { elementsOverlap } from "../helperFuncs/elementsOverlap";
 import { document, window } from "browser-monads-ts";
-
-const NAV_LINKS = [
-  { title: "Home", url: "/#home", hash: "/", className: "home-nav" },
-  { title: "FAQs", url: "/#faqs", hash: "faqs", className: "faqs-nav" },
-  {
-    title: "Interviews",
-    url: "/#interviews",
-    hash: "interviews",
-    className: "interviews-nav",
-  },
-  {
-    title: "Resources",
-    url: "/#resources",
-    hash: "resources",
-    className: "resources-nav",
-  },
-  {
-    title: "Contact",
-    url: "/#contact",
-    hash: "contact",
-    className: "contact-nav",
-  },
-];
+import { NAV_LINKS } from "../constants/navLinks";
 
 const Nav = () => {
   const [currentElement, setCurrentElement] = useState("");
