@@ -22,6 +22,7 @@
             padding: .75em 2.75em;
             margin-left: 3em;
             margin-right: 3em;
+            transition: all 125ms ease-in-out;
         } 
         
         .active {
@@ -32,8 +33,16 @@
     }
 }
 
+
+
 .nav-purple {
     background-color: $purple;
+    .nav-container {
+        a:hover {
+            background-color: $pink;
+            color: $black !important;
+        }
+    }
 }
 
 .nav-light-purple {
@@ -54,6 +63,10 @@
         color: $black !important;
         
     }
+    a:hover {
+        background-color: $peach !important;
+        color: $black !important;
+    }
 }
 
 .nav-black {
@@ -66,12 +79,19 @@
 
 .nav-peach {
     background-color: $peach;
-    .active {
-        background-color: $dark-teal !important;
-        color: $peach !important;
-    }   
-    a {
-        color: $dark-teal !important;
-        
+    .nav-container {
+        .active {
+            background-color: $dark-teal !important;
+            color: $white !important;
+        }   
+        a {
+            color: $dark-teal !important;
+            
+        }
+        a:hover {
+            background-color: $dark-teal;
+            color: $white !important;
+        }   
     }
+
 }

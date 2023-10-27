@@ -2,18 +2,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import React, { useState, useEffect } from "react";
 import { elementsOverlap } from "../helperFuncs/elementsOverlap";
 import { document, window } from "browser-monads-ts";
-
-const NAV_LINKS = [
-  { title: "Home", url: "/#home", hash: "/" },
-  { title: "FAQs", url: "/#faqs", hash: "faqs" },
-  {
-    title: "Interviews",
-    url: "/#interviews",
-    hash: "interviews",
-  },
-  { title: "Resources", url: "/#resources", hash: "resources" },
-  { title: "Contact", url: "/#contact", hash: "contact" },
-];
+import { NAV_LINKS } from "../constants/navLinks";
 
 const Nav = () => {
   const [currentElement, setCurrentElement] = useState("");
@@ -72,7 +61,11 @@ const Nav = () => {
             <AnchorLink
               key={link.title}
               to={link.url}
-              className={link.title === currentElement ? "active" : ""}
+              className={
+                link.title === currentElement
+                  ? `active ${link.className}`
+                  : `${link.className}`
+              }
               onAnchorLinkClick={() => setCurrentElement(link.title)}
             >
               {link.title}
