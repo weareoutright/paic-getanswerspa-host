@@ -4,15 +4,26 @@ import { elementsOverlap } from "../helperFuncs/elementsOverlap";
 import { document, window } from "browser-monads-ts";
 
 const NAV_LINKS = [
-  { title: "Home", url: "/#home", hash: "/" },
-  { title: "FAQs", url: "/#faqs", hash: "faqs" },
+  { title: "Home", url: "/#home", hash: "/", className: "home-nav" },
+  { title: "FAQs", url: "/#faqs", hash: "faqs", className: "faqs-nav" },
   {
     title: "Interviews",
     url: "/#interviews",
     hash: "interviews",
+    className: "interviews-nav",
   },
-  { title: "Resources", url: "/#resources", hash: "resources" },
-  { title: "Contact", url: "/#contact", hash: "contact" },
+  {
+    title: "Resources",
+    url: "/#resources",
+    hash: "resources",
+    className: "resources-nav",
+  },
+  {
+    title: "Contact",
+    url: "/#contact",
+    hash: "contact",
+    className: "contact-nav",
+  },
 ];
 
 const Nav = () => {
@@ -72,7 +83,11 @@ const Nav = () => {
             <AnchorLink
               key={link.title}
               to={link.url}
-              className={link.title === currentElement ? "active" : ""}
+              className={
+                link.title === currentElement
+                  ? `active ${link.className}`
+                  : `${link.className}`
+              }
               onAnchorLinkClick={() => setCurrentElement(link.title)}
             >
               {link.title}
